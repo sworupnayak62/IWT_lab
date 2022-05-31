@@ -1,8 +1,10 @@
 import React from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <>
       <nav className="main-nav">
@@ -22,10 +24,11 @@ const Navbar = () => {
             <a href="/">Profile</a>
             </li>
             <li>
-            <a href="/">Quiz</a>
+            <a href="/subject">Start Quiz</a>
             </li>
           </ul>
         </div>
+
       </nav>
     </>
   );

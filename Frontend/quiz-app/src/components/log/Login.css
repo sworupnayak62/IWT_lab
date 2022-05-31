@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.login-box{
+    display: flex;
+    text-align: center;
+    margin-top: 150px;
+    height: 50vh;
+}
+
+
+input[type="text"],input[type="email"],input[type="password"]{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-bottom: 2px solid #4F90A3;
+    border-radius: 0px;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-bottom: 2px solid #4F90A3;
+}
+
+.signup-box{
+    display: flex;
+    text-align: center;
+    margin-top: 150px;
+    height: 53vh;
+    width: 60%;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    color: #4F90A3;
+    text-decoration: underline;
+    font-size: 30px;
+}

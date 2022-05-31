@@ -1,0 +1,60 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.card-header{
+    display: flex;
+    height: 10vh;
+    border-bottom: none;
+}
+
+.Question-box{
+    margin-top: 150px;
+}
+
+.q-box{
+    border: 1px solid #4F90A3;
+    padding-top: 10px;
+}
+
+.option{
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn{
+    background-color: white;
+    color: black;
+    border: 2px solid #4F90A3 ;
+}
+
+.btn:focus{
+    background-color: #4F90A3;
+    border: none;
+    outline: none;
+}
+
+.btn:hover{
+    background-color: #4F90A3;
+}
+
+.submit{
+    width: 40rem;
+}
+
+.qno{
+    margin-top: 150px;
+}
+
+#save{
+    margin-left: 300px;
+    width: 30%;
+}
+
+.fs{
+    font-weight: bold;
+}
