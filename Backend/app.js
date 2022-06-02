@@ -13,6 +13,11 @@ const corsOption={
 }
 app.use(cors(corsOption))
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+     next();
+});
+
 const questionRoute = require("./api/ver1/routes/Qstns")
 app.use("/api/Questions", questionRoute)
 

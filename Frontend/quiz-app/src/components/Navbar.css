@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;1,100&family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 *{
     margin: 0;
@@ -23,7 +24,7 @@ li {
     width: 100%;
     height: 9rem;
     display: grid;
-    grid-template-columns: 10rem 1fr 2fr 0.5fr 10rem;
+    grid-template-columns: 10rem 1fr 1fr 2fr 20rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
@@ -50,7 +51,8 @@ li {
   .logo h2 span{
     font-size: 3.5rem;
     font-weight: 600;
-    color: black;
+    color: #4F90A3;
+    font-family: 'Lobster', cursive;
 
   }
   
@@ -63,7 +65,7 @@ li {
   }
   .menu-link ul li:hover > a {
     transform-origin: left;
-    color: rgba(0, 0, 3, 1);
+    color: #4F90A3;
     text-decoration: underline;
     transition: 0.5s;
   }

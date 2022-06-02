@@ -43,9 +43,12 @@ exports.LogIn = async (req, res) => {
     UserPassword: joi.string().required()
   })
 
+
   try {
     const LoginData = await LoginSchema.validateAsync(req.body)
     let user = await User.findOne({ UserEmail: LoginData.UserEmail })
+    console.log(LoginData)
+    console.log(user)
 
     if (!user) {
       res.status(400).json({

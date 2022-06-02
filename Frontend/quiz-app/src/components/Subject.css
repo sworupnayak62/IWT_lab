@@ -1,16 +1,37 @@
 
 .subject-box{
-    margin-top: 140px;
+    margin-top: 90px;
     height: 50vh;
 }
 
 .subject{
-    height: 50%;
-    width: 28%;
+    height: 30vh;
+    width: 24%;
 }
 
-button .btn:hover{
-    color: white;
-    width: 100%;
+.card button:hover{
     border: none;
+}
+
+.card button h3:hover{
+    color: white;
+}
+
+.card{
+    background-color: #4F90A3;
+}
+
+.img2{
+    height: 28vh;
+    width: 44%;
+    opacity: 20%;
+    margin: 8px;
+}
+
+.img1{
+    margin: 8px;
+    margin-bottom: 0px;
+    height: 20vh;
+    width: 44%;
+    opacity: 20%;
 }

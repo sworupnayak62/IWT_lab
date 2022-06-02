@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState,useRef,useEffect } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import axios from "axios";
 import "./Question.css";
@@ -18,9 +18,10 @@ export const Question = () => {
     const [opt4,setOption4]= useState("");
     const [ans,setAnswer]= useState("");
     const [mark,setMark]= useState(0);
+    const [qsid,setQsid]= useState("");
 
     function getQuestion(qid) {
-
+        setQsid(qid)
         const id = location.state.id
         axios.get("http://localhost:3000/api/Questions/Get/Question?id="+`${id}`+"&qid="+`${qid}`, { crossdomain: true}).then(response => {
             setQuestion(JSON.stringify(response.data.QuestionData[0].Question))
@@ -31,8 +32,13 @@ export const Question = () => {
             setAnswer(JSON.stringify(response.data.QuestionData[0].Answer))
         })
     }
-    let answer = ""
+    let answer = "";
     // let mark = 0
+
+
+    useEffect(() => {
+        getQuestion(1)
+      },[]);
 
     const handleClick = value => () => {
         answer = value
@@ -47,8 +53,9 @@ export const Question = () => {
         }
     }
 
-    function changeColor(id) {
-        
+    function changeColor(qsid) {
+        document.getElementById("btn"+`${qsid}`).style.backgroundColor="#32c741"
+        {getQuestion(parseInt(`${qsid}`)+1)}
     }
 
   return (
@@ -56,7 +63,7 @@ export const Question = () => {
     <div className='row'>
         <div className='col me-5 q-box'>
             
-            <div className='card border-0'>
+            <div className='card card1 border-0'>
                 <div className='card-header p-4 rounded-3'>
                     <h2 className=' fw-semibold'>{qstn}</h2>
                 </div>
@@ -66,7 +73,8 @@ export const Question = () => {
                     <button className='option btn border-start-0 my-4 p-2 rounded-0  border-end-0 text-start px-4' onClick={handleClick(opt3)}><h4 className='fw-semibold'>C:{opt3}</h4></button>
                     <button className='option btn border-start-0 my-4 p-2 mb-5 rounded-0  border-end-0 text-start px-4' onClick={handleClick(opt4)}><h4 className='fw-semibold'>D:{opt4}</h4></button>
                     <button className='btn btn-primary my-5' id='save' onClick={() => {
-                        checkAnswer()
+                        {checkAnswer();
+                        changeColor(qsid)}
                     }}><h4 className='fw-semibold'>Save</h4></button>
                 </div>
             </div>

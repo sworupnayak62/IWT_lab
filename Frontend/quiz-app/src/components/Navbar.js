@@ -23,9 +23,6 @@ const Navbar = () => {
             <li>
             <a href="/">Profile</a>
             </li>
-            <li>
-            <a href="/subject">Start Quiz</a>
-            </li>
           </ul>
         </div>
 

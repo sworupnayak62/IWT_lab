@@ -12,7 +12,7 @@ export const Mark = () => {
     <>
       <Navbar />
       <div className='d-flex justify-content-center align-items-center'>
-      <div className='card border-0 mark-box'>
+      <div className='card card-mark border-0 mark-box'>
         <div className='card-header fs-1'><h1 className='text-center'>Your Mark</h1></div>
         <div className='card-body'>
           <h1>{mark}/5</h1>

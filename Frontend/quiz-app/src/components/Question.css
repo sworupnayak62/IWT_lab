@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.card1{
+    background-color: white;
+}
+
 .card-header{
     display: flex;
     height: 10vh;
@@ -30,11 +34,11 @@
     background-color: white;
     color: black;
     border: 2px solid #4F90A3 ;
+    box-sizing: border-box;
 }
 
 .btn:focus{
     background-color: #4F90A3;
-    border: none;
     outline: none;
 }
 
@@ -53,6 +57,11 @@
 #save{
     margin-left: 300px;
     width: 30%;
+}
+
+#save:focus{
+    border: none;
+    outline: none;
 }
 
 .fs{
